@@ -15,6 +15,9 @@ const invitationForm = document.getElementById('invitationForm');
 const inputEmail = document.getElementById('inputEmail');
 const btnSend = document.getElementById('btnSendInvitation');
 
+// focus
+inputEmail.focus();
+
 invitationForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
