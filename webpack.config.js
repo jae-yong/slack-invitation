@@ -4,6 +4,10 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const config = require('config');
+
+const slackConfig = config.get('slack');
+
 module.exports = {
   context: path.join(__dirname, 'src'),
   entry: './index.js',
@@ -45,6 +49,10 @@ module.exports = {
       minify: {
         collapseWhitespace: true,
         collapseInlineTagWhitespace: true,
+      },
+      data: {
+        group_domain: slackConfig.group_domain,
+        group_name: slackConfig.group_name,
       },
     }),
     new webpack.optimize.UglifyJsPlugin(),
