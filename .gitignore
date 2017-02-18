@@ -1,0 +1,4 @@
+/node_modules/
+/public/*
+!/public/font-awesome-4.7.0
+/config/local*

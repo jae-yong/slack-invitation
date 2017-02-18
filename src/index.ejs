@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+    <!-- Milligram CSS minified -->
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="card card--center">
+      <div class="card__header">
+        <h3><a href="https://<%= htmlWebpackPlugin.options.data.group_domain %>.slack.com/"><strong><%= htmlWebpackPlugin.options.data.group_name %></strong></a> Slack Invitation</h3>
+      </div>
+      <div class="card__body">
+        <form id="invitationForm" action="/api/v1/invitation" method="post" class="card__body__form">
+          <div class="card__body__label">
+            <label for="inputEmail">Email: </label>
+          </div>
+          <input id="inputEmail" type="email" name="email" placeholder="Input your email" required="required">
+          <button id="btnSendInvitation" type="submit" class="card__body__button">Send Invitation Email</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
