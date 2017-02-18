@@ -33,8 +33,9 @@ router.post('/api/v1/invitation', (req, res) => {
       result = body;
     }
 
-    logger.debug(result);
-    if (body.ok) {
+    logger.debug(`[email: ${email}] - response: ${JSON.stringify(result)}`);
+
+    if (result.ok) {
       return res.sendStatus(200);
     }
 
