@@ -41,10 +41,20 @@ strong {
   justify-content: center;
 }
 
-.card__body__form {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+@media (min-width: 600px) {
+  .card__body__form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card__body__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .card__body__label {
@@ -53,9 +63,17 @@ strong {
   padding-top: 5px;
 }
 
-.card__body__button {
-  cursor: pointer;
-  margin-left: 10px;
+@media (min-width: 600px) {
+  .card__body__button {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card__body__button {
+    cursor: pointer;
+  }
 }
 
 /* webkit solution */
