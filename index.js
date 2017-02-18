@@ -17,25 +17,14 @@ program
 const PORT = program.port || 3000;
 const ADDRESS = '0.0.0.0';   // ipv4
 
-// middlewares
-const middlewares = require('./middlewares');
-
-// access-log
-middlewares
-  .filter(m => m.name === 'access-log.js')
-  .forEach(m => app.use(m.module))
-  ;
-
 // static files
 app.use(express.static('public'));
-app.use(express.static('views'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // middlewares except access-log
-middlewares
-  .filter(m => m.name !== 'access-log.js')
+require('./middlewares')
   .forEach(m => app.use(m.module));
 
 // routers
