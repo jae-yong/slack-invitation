@@ -35,7 +35,7 @@ invitationForm.addEventListener('submit', (e) => {
     },
   })
   .then(() => {
-    alert('Sent invitation email successfully.\nCheck your email.');
+    alert(`Sent invitation email(to: ${inputEmail.value}) successfully.\nCheck your email.`);
     location.reload();
   })
   .catch(() => {
