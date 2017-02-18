@@ -3,6 +3,7 @@ const packageInfo = require('./package.json');
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 
 const logger = require('./lib/get-logger')();
 
@@ -16,6 +17,8 @@ program
 
 const PORT = program.port || 3000;
 const ADDRESS = '0.0.0.0';   // ipv4
+
+app.use(helmet());
 
 // static files
 app.use(express.static('public'));
