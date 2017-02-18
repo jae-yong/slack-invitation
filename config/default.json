@@ -1,0 +1,7 @@
+{
+  "slack": {
+    "group_domain": "GROUP_DOMAIN",
+    "client_id": "CLIENT_ID",
+    "access_token": "ACCESS_TOKEN"
+  }
+}

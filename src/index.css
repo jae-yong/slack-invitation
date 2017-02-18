@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  justify-content: center;
+
+  background-color: #fafafa;
+}
+
+strong {
+  margin-right: 5px;
+}
+
+.card {
+  display: flex;
+
+  width: 600px;
+
+  border: solid 1px #b4b4b4;
+  background-color: #f1f1f1;
+  box-shadow: 1px 1px 1px #363636;
+
+  margin: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.card--center {
+  flex-direction: column;
+}
+
+.card__header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.card__body {
+  display: flex;
+  justify-content: center;
+}
+
+.card__body__form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card__body__label {
+  display: flex;
+  margin-right: 10px;
+  padding-top: 5px;
+}
+
+.card__body__button {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* webkit solution */
+::-webkit-input-placeholder { text-align:center; }
+/* mozilla solution */
+input:-moz-placeholder { text-align:center; }
