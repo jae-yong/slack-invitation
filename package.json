@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "build": "webpack -p",
-    "start": "node index.js"
+    "start": "cross-env NODE_ENV=production node index.js"
   },
   "author": "jae-yong",
   "license": "ISC",
@@ -28,6 +28,7 @@
     "callsites": "^2.0.0",
     "commander": "^2.9.0",
     "config": "^1.25.1",
+    "cross-env": "^3.1.4",
     "css-loader": "^0.26.1",
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
