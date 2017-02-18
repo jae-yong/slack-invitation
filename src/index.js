@@ -26,7 +26,7 @@ invitationForm.addEventListener('submit', (e) => {
 
   axios({
     method: 'POST',
-    url: '/api/v1/invitation',
+    url: 'api/v1/invitation',
     headers: {
       'Content-Type': 'application/json',
     },
