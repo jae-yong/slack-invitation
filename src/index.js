@@ -33,12 +33,10 @@ invitationForm.addEventListener('submit', (e) => {
     data: {
       email: inputEmail.value,
     },
-  })
-  .then(() => {
+  }).then(() => {
     alert(`Sent invitation email(to: ${inputEmail.value}) successfully.\nCheck your email.`);
     location.reload();
-  })
-  .catch(() => {
+  }).catch(() => {
     alert('Sending invitation email is fail!\nMaybe you are already invited.');
     location.reload();
   });
