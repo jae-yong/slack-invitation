@@ -1,12 +1,7 @@
 {
     "env": {
-      "browser": true,
-      "node": true
+      "node": true,
+      "browser": true
     },
-    "extends": "airbnb",
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ]
+    "extends": "airbnb-base"
 }

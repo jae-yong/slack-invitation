@@ -18,7 +18,7 @@ module.exports = {
   },
   // devtool: 'cheap-module-source-map',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
@@ -27,11 +27,6 @@ module.exports = {
           presets: ['es2015'],
         },
       },
-      // {
-      //   test: /\.css$/,
-      //   exclude: /(node_modules)/,
-      //   loader: 'style-loader!css-loader',
-      // },
       {
         test: /\.css$/,
         exclude: /(node_modules)/,
